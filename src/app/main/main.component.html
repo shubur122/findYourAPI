@@ -1,0 +1,17 @@
+<div class="container">
+        <div class="hills-left"></div>
+        <div class="wrapper">
+            <app-navbar></app-navbar>
+            <div class="content-wrap">
+                <div class="text-wrap">
+                    <p class="blueText" #text><span class="cursor">|</span></p>
+                </div>
+                <div *ngIf="toggleHand" class="btn-wrap">
+                    <button class="hand" routerLink="/findapi"></button>
+                </div>
+            </div>
+            
+            <button class="skip-btn" routerLink="/findapi">Check APIs</button>
+        </div>
+        <div class="hills-right"></div>
+</div>

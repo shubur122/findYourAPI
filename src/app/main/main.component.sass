@@ -1,0 +1,147 @@
+p
+    height: 100%
+    font-size: 3rem
+    display: table-cell
+    vertical-align: middle
+    text-align: center
+
+.container
+    position: absolute
+    display: flex
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+    background-color: black
+    overflow: hidden
+    flex-direction: row
+
+.wrapper
+    flex: 3
+
+.hills-left
+    flex: 1
+    height: 8640px
+    max-width: 300px
+    background: url('../../assets/bgleft.svg') repeat-y
+    animation: up 60s linear infinite
+
+.hills-right
+    flex: 1
+    height: 8640px
+    max-width: 300px
+    background: url('../../assets/bgright.svg') repeat-y
+    animation: down 60s linear infinite
+
+.content-wrap
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr
+    min-width: 80%
+    width: 80%
+    max-height: 50%
+    height: 50%
+    margin: 50px auto
+    border: solid 2px #4dd7fa
+    border-radius: 15px
+    overflow: auto
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+.content-wrap::-webkit-scrollbar
+    display: none
+
+.text-wrap
+    grid-row-start: 2
+    display: table
+
+.btn-wrap
+    grid-row-start: 3
+    display: flex
+    align-items: center
+    justify-content: center
+
+.hand
+    color: white
+    background-color: black
+    border: none
+    font-size: 2rem
+    width: 100px
+    height: 50px
+    animation: wave 4s linear infinite
+
+.hand::before
+    content: "🖐"
+
+.skip-btn
+    position: absolute
+    bottom: 25px
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: black
+    color: #4dd7fa
+    padding: 5px
+    border: solid 2px #4dd7fa
+    border-radius: 5px
+
+.skip-btn:hover
+    background-color: #4dd7fa
+    color: black
+    transition: 0.5s
+
+.cursor
+    font-size: 3rem
+    animation: blink 0.8s infinite
+
+@keyframes blink
+    0%
+        opacity: 0
+    50%
+        opacity: 1
+    100%
+        opacity: 0
+
+@keyframes up
+    0%
+        transform: translate3d(0, 0, 0)
+    100%
+        transform: translate3d(0,-4320px, 0)
+@keyframes down
+    0%
+        transform: translate3d(0,-4320px, 0)
+    100%
+        transform: translate3d(0, 0, 0)
+@keyframes wave
+    0%
+        transform: rotate( 0.0deg)
+    10%
+        transform: rotate(14.0deg)
+    20%
+        transform: rotate(-8.0deg)
+    30%
+        transform: rotate(14.0deg)
+    40%
+        transform: rotate(-4.0deg)
+    50%
+        transform: rotate(10.0deg)
+    60%
+        transform: rotate( 0.0deg)
+    100%
+        transform: rotate( 0.0deg)
+
+@media (max-width: 768px)
+    .content-wrap
+        height: 25%
+        width: 100%
+        border: none
+    p
+        font-size: 1.25rem
+    .hand
+        font-size: 1.5rem
+    .hills-right
+        background-size: 100%
+        animation-duration: 100s
+    .hills-left
+        background-size: 100%
+        animation-duration: 100s
+    .skip-btn
+        bottom: 25%

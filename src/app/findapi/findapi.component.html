@@ -1,0 +1,17 @@
+<div class="container">
+    <app-navbar class="nav"></app-navbar>
+    <div class="topsvg"></div>
+    <div class="content-wrap">
+        <span class="headline">What is an 'API'?</span>
+        <div class="box">
+            <p>{{aboutApi}}</p>
+        </div>
+        <span class="headline">Check some API Examples below</span>
+        <div class="flexbox">
+            <ng-container *ngFor="let api of apis">
+                <button [routerLink]="['/findapi', api.route]" (click)="sendApiDetails(api)">{{api.name}}</button>
+            </ng-container>
+        </div>
+    </div>
+    <div class="bottomsvg"></div>
+</div> 

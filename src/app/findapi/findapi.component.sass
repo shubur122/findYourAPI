@@ -1,0 +1,78 @@
+.container
+    position: absolute
+    top: 0
+    left: 0
+    min-height: 100vh
+    max-width: 100vw
+    background-color: black
+    overflow: hidden
+    flex-direction: row
+
+.content-wrap
+    min-width: 80%
+    min-height: 80%
+    margin: 30px auto
+
+.box
+    height: 75%
+    width: 60%
+    margin: 25px auto
+    border: 2px solid #4dd7fa
+    padding: 1rem
+    background: #135869
+    border-radius: 10px
+    box-shadow: 0 0 1em #4dd7fa
+p
+    color: white
+    margin: 0 auto
+    text-align: justify
+    font-size: 1.5rem
+
+.topsvg
+    height: 200px
+    max-width: 100%
+    background: url('../../assets/findapitop.svg')
+
+.bottomsvg
+    height: 300px
+    max-width: 100%
+    background: url('../../assets/findapibottom.svg')
+
+.flexbox
+    min-height: 75%
+    width: 60%
+    display: flex
+    border: green
+    margin: 50px auto
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-evenly
+    row-gap: 25px
+    column-gap: 25px
+
+button
+    height: 75px
+    font-size: 1.5rem
+    width: 220px
+    background-color: #4dd7fa
+    color: black
+    border-radius: 10px
+    border: none
+    padding: 5px
+    box-shadow: inset 0 0 1em #254b55
+
+button:hover
+    background-color: black
+    color: #4dd7fa
+    border: 2px solid #4dd7fa
+    transition: 0.7s
+
+@media (max-width: 768px)
+    .flexbox
+        flex-direction: column
+    .headline
+        font-size: 2rem
+    .box
+        width: 90%
+    p
+        font-size: 1rem
