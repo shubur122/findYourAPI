@@ -1,1 +1,46 @@
+
 <app-example-intro></app-example-intro>
+<div class="container">
+    <div class="profile-data-wrap">
+        <div class="profile-data">
+            <div class="photo">
+                <img class="profile-pic" [src]="user && user?.avatar ? user.avatar : defaultPic" alt="">
+            </div>
+            <div class="name">
+                <span class="fullname">{{user?.first_name}} {{user?.last_name}}</span>
+                <span class="sub-lvl">Subscription: {{user?.subscription?.plan}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="sideinfo">
+            <span class="section-title">Info:</span>
+            <ul>
+                <li>E-mail: <span class="bold">{{user?.email}}</span></li>
+                <li>Country: <span class="bold">{{user?.address?.country}}</span></li>
+                <li>City: <span class="bold">{{user?.address?.city}}</span></li>
+                <li>Profession: <span class="bold">{{user?.employment?.title}}</span></li>
+            </ul>
+        </div>
+        <div class="posts">
+            <div class="title-wrap">
+                <span class="section-title">Posts</span>
+            </div>
+            <ng-container *ngFor="let post of posts">
+                <div class="posts-content">
+                    <div class="post-profile-info">
+                        <div class="photo">
+                            <img class="post-profile-pic" [src]="user && user?.avatar ? user.avatar : defaultPic" alt="">
+                        </div>
+                        <span class="name">{{user?.first_name}} {{user?.last_name}}</span>
+                    </div>
+                    <p class="post-body">{{post.body}}</p>
+                </div>  
+            </ng-container>
+        </div>
+    </div>
+</div> 
+
+
+
+

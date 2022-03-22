@@ -6,7 +6,7 @@
         <div class="box">
             <p>{{aboutApi}}</p>
         </div>
-        <span class="headline">Check some API Examples below</span>
+        <span class="headline">Check some API Examples</span>
         <div class="flexbox">
             <ng-container *ngFor="let api of apis">
                 <button [routerLink]="['/findapi', api.route]" (click)="sendApiDetails(api)">{{api.name}}</button>

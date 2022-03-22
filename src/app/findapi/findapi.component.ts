@@ -15,7 +15,11 @@ export class FindapiComponent {
     {
       name: 'Random Data API',
       route: 'randomdata',
-      description: '',
+      description: `
+      Provides us with lots of different random data like addresses, users, food, vehicles or even 'Random Hipster Stuff.
+      This data might be usefull when u are building a social-media site.
+      Note: Posts come from json-placeholder api, Random Data doesn't provide posts.
+      `,
       official: 'https://random-data-api.com/',
     },
     {
